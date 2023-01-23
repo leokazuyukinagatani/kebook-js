@@ -40,21 +40,21 @@
     </section>
     <section class="card">
       <div class="card-input">
-        <button><svg width="14" height="25" viewBox="0 0 14 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button id="button-sub"><svg width="14" height="25" viewBox="0 0 14 25" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M14 1.6846L14 23.3154C14 24.8132 12.2118 25.5633 11.166 24.5042L0.486211 13.6888C-0.16207 13.0323 -0.16207 11.9677 0.486211 11.3112L11.166 0.495813C12.2118 -0.563351 14 0.186808 14 1.6846Z"
               fill="#5F6074" />
           </svg>
         </button>
-        <span>1</span>
-        <button><svg width="14" height="25" viewBox="0 0 14 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <span id="span-perfilers">1</span>
+        <button id="button-add"><svg width="14" height="25" viewBox="0 0 14 25" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M0 23.3154V1.68456C0 0.186769 1.78821 -0.563304 2.83401 0.495777L13.5138 11.3112C14.1621 11.9677 14.1621 13.0323 13.5138 13.6888L2.83401 24.5042C1.78821 25.5634 0 24.8132 0 23.3154Z"
               fill="#5F6074" />
           </svg>
         </button>
       </div>
-      <input type="range" name="" id="">
+      <input value="1" min="1" max="10" type="range" name="" id="input-perfilers">
       <strong>CADA PERFIL CONTEMPLA</strong>
       <ul class="social">
         <li>
@@ -102,9 +102,13 @@
 
     <section>
       <strong>SELECIONE O PERÍODO DO SEU PAGAMENTO</strong>
-      <div class="buttons-plans">
-        <button class="active">Mensal</button>
-        <button>Anual</button>
+    
+      <div class="switch-wrapper">
+        <input id="monthly" type="radio" name="switch" checked>
+        <input id="yearly" type="radio" name="switch">
+        <label for="monthly">Mensal</label>
+        <label for="yearly">Anual</label>
+        <span class="highlighter"></span>
       </div>
     </section>
 
@@ -114,9 +118,15 @@
 
       </div>
       <div class="card-content">
-        <span>R$ 246,41</span>
+        <span id="price">R$ 246,41</span>
+        <button id="button-purchase" class="btn_violet">Comprar Agora
+          <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10.5149 6.66667H4.40775L4.54411 7.33334H10.1361C10.457 7.33334 10.6948 7.63127 10.6237 7.94415L10.5088 8.4499C10.8982 8.63892 11.1667 9.03809 11.1667 9.5C11.1667 10.15 10.635 10.6759 9.98284 10.6665C9.36152 10.6576 8.85054 10.1534 8.83377 9.53223C8.82461 9.19292 8.96054 8.88538 9.18384 8.66665H4.81617C5.03236 8.87844 5.16667 9.17346 5.16667 9.5C5.16667 10.1628 4.614 10.6965 3.94438 10.6654C3.34979 10.6378 2.86623 10.1574 2.83498 9.56294C2.81085 9.1039 3.0524 8.69929 3.41938 8.48823L1.9559 1.33333H0.5C0.223854 1.33333 0 1.10948 0 0.833334V0.5C0 0.223854 0.223854 0 0.5 0H2.63602C2.87354 0 3.07827 0.167104 3.12588 0.399792L3.31683 1.33333H11.4998C11.8206 1.33333 12.0585 1.63127 11.9874 1.94415L11.0025 6.27748C10.9508 6.50513 10.7484 6.66667 10.5149 6.66667ZM8.5 3.5H7.5V2.66667C7.5 2.48256 7.35077 2.33333 7.16667 2.33333H6.83333C6.64923 2.33333 6.5 2.48256 6.5 2.66667V3.5H5.5C5.3159 3.5 5.16667 3.64923 5.16667 3.83333V4.16667C5.16667 4.35077 5.3159 4.5 5.5 4.5H6.5V5.33333C6.5 5.51744 6.64923 5.66667 6.83333 5.66667H7.16667C7.35077 5.66667 7.5 5.51744 7.5 5.33333V4.5H8.5C8.68411 4.5 8.83333 4.35077 8.83333 4.16667V3.83333C8.83333 3.64923 8.68411 3.5 8.5 3.5Z"
+              fill="white" />
+          </svg>
+        </button>
       </div>
-      <button class="btn_violet">Comprar Agora</button>
     </section>
   </main>
 </body>

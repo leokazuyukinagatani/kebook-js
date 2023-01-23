@@ -8,9 +8,34 @@ body {
   background-image: url('../assets/kebook-bg.png');
   background-size: cover;
   text-align: center;
-  
+  font-family: 'Roboto', sans-serif;
+  color: #5F6074;
 }
 
+h1 {
+  font-size: 1.375rem;
+  font-weight: 900;
+}
+
+p {
+  color: #8A8D9C;
+  font-weight: 500;
+  font-size: 0.625rem;
+}
+
+strong {
+  font-weight: 900;
+  font-size: 0.625rem;
+  letter-spacing: -0.05em;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+
+}
 .container {
   padding-top: 3rem;
   display: flex;
@@ -31,16 +56,31 @@ body {
   align-items: center;
   overflow: hidden;
   gap: 1rem;
-  
+  padding-bottom: 1rem;
 }
 
 .card-input {
-  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 4rem;
 }
+
+.card-input span {
+  font-weight: 900;
+  font-size: 4rem;
+}
+
 .card-header {
   padding: 1rem;
   background: linear-gradient(180deg, #b70cf9 0%, #8008f9 100%);
   width: 100%;
+}
+
+.card-header h2 {
+  color : #fff;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .buttons-plans {
@@ -49,6 +89,8 @@ body {
   grid-template-columns: 1fr 1fr;
   box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.25);
   border-radius: 2rem;
+  width: 22.5rem;
+
 }
 
 button {
@@ -60,23 +102,36 @@ button {
   cursor: pointer;
 
 }
+
+.buttons-plans button {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.75rem;
+  color: #CACAD2;
+}
 .buttons-plans button:first-child {
   border-radius: 36px 0px 0px 36px;
 }
 .buttons-plans button:nth-child(even) {
-
   border-radius: 0px 36px 36px 0px;
 }
 
 .buttons-plans button.active {
+  color: #fff;
   background: linear-gradient(180deg, #b70cf9 0%, #8008f9 100%);
+  cursor: inherit;
+}
+
+.buttons-plans button:not(.active):hover {
+  background: linear-gradient(180deg, #970cd0 0%, #4004f5 100%);
+  color: #fff;
 }
 
 .social {
   list-style: none;
   display: flex;
   gap: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 2 rem;
 }
 
 
@@ -91,4 +146,88 @@ button {
 .btn_violet:hover {
   background: linear-gradient(180deg, #970cd0 0%, #4004f5 100%);
 
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-content span {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.card-content button {
+  font-size: 0.75rem;
+  font-weight: 900;
+  
+}
+
+
+
+
+.switch-wrapper {
+  position: relative;
+  display: inline-flex;
+  padding: 4px;
+  border: 1px solid lightgrey;
+  border-radius: 30px;
+  background: var(--white);
+  overflow: hidden;
+}
+
+.switch-wrapper [type="radio"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.switch-wrapper [type="radio"]:checked#monthly ~ label[for="monthly"],
+.switch-wrapper [type="radio"]:checked#yearly ~ label[for="yearly"] {
+  color: white;
+}
+
+.switch-wrapper [type="radio"]:checked#monthly ~ label[for="monthly"]:hover,
+.switch-wrapper [type="radio"]:checked#yearly ~ label[for="yearly"]:hover {
+  background: transparent;
+}
+
+.switch-wrapper
+  [type="radio"]:checked#monthly
+  + label[for="yearly"]
+  ~ .highlighter {
+  transform: none;
+}
+
+.switch-wrapper
+  [type="radio"]:checked#yearly
+  + label[for="monthly"]
+  ~ .highlighter {
+  transform: translateX(100%);
+}
+
+.switch-wrapper label {
+  font-size: 16px;
+  z-index: 1;
+  min-width: 100px;
+  line-height: 32px;
+  cursor: pointer;
+  transition: color 0.25s ease-in-out;
+}
+
+.switch-wrapper:hover {
+  background: linear-gradient(180deg, #970cd0 0%, #4004f5 100%);
+  color: #fff;
+}
+
+.switch-wrapper .highlighter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  /* border-radius: 0px 36px 36px 0px; */
+  background: linear-gradient(180deg, #b70cf9 0%, #8008f9 100%);
+  transition: transform 0.25s ease-in-out;
 }
