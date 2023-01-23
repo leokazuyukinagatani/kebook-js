@@ -46,6 +46,10 @@ function setPrice() {
 
 }
 
+function finishPurchase() {
+  alert(`Plano escolhido ${switchInputs[0].checked ? 'mensal':'anual'} no valor de ${price.textContent} para ${inputNumberOfPerfilers.value} perfil(s)}` );
+}
+
 
 
 buttonAddNumberOfPerfilers.onclick = addPerfilers;
@@ -54,7 +58,7 @@ buttonSubNumberOfPerfilers.onclick = subPerfilers;
 inputNumberOfPerfilers.onchange = onChangePerfilers
 
 
-buttonPurchase.onclick = setPrice;
+buttonPurchase.onclick = finishPurchase;
 switchInputs[0].onchange =onChangePerfilers
 switchInputs[1].onchange =onChangePerfilers
 
