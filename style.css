@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('../assets/kebook-bg.png');
+  background-size: cover;
+  text-align: center;
+  
+}
+
+.container {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  min-height: 100vh;
+}
+
+.card {
+  width: 35rem;
+  background-color: #fff;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  gap: 1rem;
+  
+}
+
+.card-input {
+  margin: 1rem 0;
+}
+.card-header {
+  padding: 1rem;
+  background: linear-gradient(180deg, #b70cf9 0%, #8008f9 100%);
+  width: 100%;
+}
+
+.buttons-plans {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.25);
+  border-radius: 2rem;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  padding: 1rem;
+  background: #fff;
+  cursor: pointer;
+
+}
+.buttons-plans button:first-child {
+  border-radius: 36px 0px 0px 36px;
+}
+.buttons-plans button:nth-child(even) {
+
+  border-radius: 0px 36px 36px 0px;
+}
+
+.buttons-plans button.active {
+  background: linear-gradient(180deg, #b70cf9 0%, #8008f9 100%);
+}
+
+.social {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+
+.btn_violet {
+  background: linear-gradient(180deg, #b70cf9 0%, #8008f9 100%);
+  border-radius: 2rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 1rem 2rem;
+  color: #fff;
+}
+
+.btn_violet:hover {
+  background: linear-gradient(180deg, #970cd0 0%, #4004f5 100%);
+
+}
